@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"/><a href="/">back</a><h1>Composition with Javascript</h1><p>A composition in functional programming is a function that has been 'composed' out of two functions.
+</p><p>More formally a composition is when we have a function <em>f</em>
+that takes an argument of type <em>A</em> and returns <em>B</em> 
+<em>(A &rarr; B)</em> and another function <em>g</em> that takes 
+an argument of type <em>B</em> and returns <em>C</em> 
+<em>(B &rarr; C)</em>. Then we can create a function out of 
+<em>f</em> and <em>g</em> that takes an argument of type 
+<em>A</em> and returns <em>C</em> <em>(A &rarr; C)</em>.
+</p><p>This type of function composition can be denoted as
+<em>g &compfn; f</em>.
+</p><p>Below is an implementation of a compose function in JavaScript.</p><script src="//gist.github.com/ksnabb/a023f3643c50cfdc6d272a0e738d1106.js"></script><script src="/js/composition-with-javascript.js"></script>
