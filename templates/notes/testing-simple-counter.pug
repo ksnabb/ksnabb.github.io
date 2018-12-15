@@ -1,0 +1,24 @@
+link(href="https://unpkg.com/mocha@5.2.0/mocha.css", rel="stylesheet")
+
+a(href="/") back
+
+h1 Testing the Simple Counter
+
+p.
+  This setup tests the Simple Counter app. THe tests uses mocha and there is basically nothing special in this
+  test implementation.
+
+include ../components/simple-counter.pug
+
+#mocha
+
+script(src="https://unpkg.com/chai/chai.js")
+script(src="https://unpkg.com/mocha@5.2.0/mocha.js")
+
+script mocha.setup('bdd')
+
+script(src="/js/testing-simple-counter-app.js")
+
+script.
+  mocha.checkLeaks();
+  mocha.run();

@@ -1,0 +1,4 @@
+<link href="https://unpkg.com/mocha@5.2.0/mocha.css" rel="stylesheet"/><a href="/">back</a><h1>Testing the Simple Counter</h1><p>This setup tests the Simple Counter app. THe tests uses mocha and there is basically nothing special in this
+test implementation.
+</p><div class="app"><p>The number is now 0</p><button>increment the number</button></div><script src="/js/simple-counter-app.js"></script><div id="mocha"></div><script src="https://unpkg.com/chai/chai.js"></script><script src="https://unpkg.com/mocha@5.2.0/mocha.js"></script><script>mocha.setup('bdd')</script><script src="/js/testing-simple-counter-app.js"></script><script>mocha.checkLeaks();
+mocha.run();</script>
