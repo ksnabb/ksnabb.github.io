@@ -1,10 +1,25 @@
-h1 notes
+extends boilerplate/basic.pug
 
-ul
-  li
-    a(href='notes/composition-with-javascript.html') Composition with Javascript
-  li
-    a(href='notes/simple-counter.html') Simple Counter
-    ul
-      li
-        a(href='notes/testing-simple-counter.html') Testing the Simple Counter
+block body
+  h1 notes
+
+  ul
+    li
+      h2 Functional Programming
+      p Notes about functional programming
+      ul
+        li
+          a(href='notes/composition-with-javascript.html') Composition with Javascript
+    li
+      h2 React Examples Without React
+      p.
+        These notes are React examples (found on the web) implemented with vanilla JavaScript and Server Rendered HTML.
+      ul
+        li
+          a(href='notes/simple-counter.html') Simple Counter
+          ul
+            li
+              a(href='notes/testing-simple-counter.html') Testing the Simple Counter
+        li
+          a(href='notes/seconds-elapsed.html') Seconds Elapsed
+

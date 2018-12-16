@@ -1,24 +1,45 @@
-link(href="https://unpkg.com/mocha@5.2.0/mocha.css", rel="stylesheet")
+extends ../boilerplate/basic.pug
+block head
+  link(href="https://unpkg.com/mocha@5.2.0/mocha.css", rel="stylesheet")
 
-a(href="/") back
+  style.
+    .app {
+      border: 1px solid #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
 
-h1 Testing the Simple Counter
+block body
+  a(href="/") back
 
-p.
-  This setup tests the Simple Counter app. THe tests uses mocha and there is basically nothing special in this
-  test implementation.
+  h1 Testing the Simple Counter
 
-include ../components/simple-counter.pug
+  p This setup tests the Simple Counter app.
 
-#mocha
+  p.
+    The test framework used is #[a(href="https://mochajs.org/") mocha] which provides a way to run
+    tests in the browser. The component itself is included in the server side templates on this page.
 
-script(src="https://unpkg.com/chai/chai.js")
-script(src="https://unpkg.com/mocha@5.2.0/mocha.js")
+  p.
+    Below you can see the same simple counter component that was presented in the #[a(href="/notes/simple-counter.html") Simple Counter] note.
 
-script mocha.setup('bdd')
+  include ../components/simple-counter.pug
 
-script(src="/js/testing-simple-counter-app.js")
+  p.
+    The testing is done by checking with the help of DOM functions the state of the simple counter and also
+    triggering click event on the simple counter button.
 
-script.
-  mocha.checkLeaks();
-  mocha.run();
+  p The tests them selves are run when loading this page and the result can be seen below:
+
+  #mocha
+
+  script(src="https://unpkg.com/chai/chai.js")
+  script(src="https://unpkg.com/mocha@5.2.0/mocha.js")
+
+  script mocha.setup('bdd')
+
+  script(src="/js/testing-simple-counter-app.js")
+
+  script.
+    mocha.checkLeaks();
+    mocha.run();
