@@ -7,7 +7,7 @@
 webframeworks like React, Reagent, Elm or whatever framework.
 </p><p>I decided to do this by using pure HTML and JavaScript. The reasoning being not more then experimentation
 and maybe answer to myself on why these frameworks are needed.
-</p><p>tl;dr below is the counter app.</p><div class="app"><p>The number is now 0</p><button>increment the number</button></div><script src="/js/simple-counter-app.js"></script><h2>The Events</h2><p>A natural theme in many frameworks is to connect elements in the UI to be reactive on state changes. A common
+</p><p>tl;dr below is the counter app.</p><div class="app"><p>The number is now 0</p><button>increment the number</button></div><script src="/js/notes/simple-counter-app.js"></script><h2>The Events</h2><p>A natural theme in many frameworks is to connect elements in the UI to be reactive on state changes. A common
 pattern to achieve this is to subscribe to state change events. For this we need a publish subscribe kind of
 functionality.
 </p><p>Below you can see one pure JavaScript impementation of publish subscribe.</p><script src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=pubsub.js"></script><h2>The State</h2><p>The state will use the above pubSub to dispatch events on state changes.</p><script src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=state.js"></script><h2>The View</h2><p>The view can then be setup using the pubSub and the state. For connecting event listeners we can use standard

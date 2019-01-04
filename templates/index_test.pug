@@ -1,0 +1,25 @@
+extends boilerplate/basic
+
+block head
+  link(href="https://unpkg.com/mocha@5.2.0/mocha.css", rel="stylesheet")
+
+block body
+  a(href="/")
+  ul
+    li TODO
+    li test that all links work
+
+  iframe(id="notes-page", src="https://ksnabb.github.io", width="100%", height="500px")
+
+  #mocha
+
+  script(src="https://unpkg.com/chai/chai.js")
+  script(src="https://unpkg.com/mocha@5.2.0/mocha.js")
+
+  script mocha.setup('bdd')
+
+  script(src="/js/test.js")
+
+  script.
+    mocha.checkLeaks();
+    mocha.run();
