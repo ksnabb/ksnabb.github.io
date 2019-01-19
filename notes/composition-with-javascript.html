@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>Notes</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"></head><body><a href="/">back</a><h1>Composition with Javascript</h1><p>A composition in functional programming is a function that has been 'composed' with two functions.
+<!DOCTYPE html><html lang="en"><head><title>Notes</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"></head><body><a href="/">back</a><h1>Composition with Javascript</h1><p>A composition in functional programming is a function that has been 'composed' from two functions.
 </p><p>More formally a composition is when we have a function <em>f</em>
 that takes an argument of type <em>A</em> and returns <em>B</em>
 <em>(A &rarr; B)</em> and another function <em>g</em> that takes
@@ -8,6 +8,8 @@ an argument of type <em>B</em> and returns <em>C</em>
 <em>A</em> and returns <em>C</em> <em>(A &rarr; C)</em>.
 </p><p>This type of function composition can be denoted as
 <em>f &compfn; g</em>.
-</p><p>Further function composition is always associative. Which means that
-<em>f &compfn; (g &compfn; h)</em> gives the same result as <em>(f &compfn; g) &compfn; h</em>.
-</p><p>Below is an implementation of a compose function in JavaScript.</p><script src="//gist.github.com/ksnabb/a023f3643c50cfdc6d272a0e738d1106.js"></script><script src="/js/notes/composition-with-javascript.js"></script></body></html>
+</p><p>Below is an implementation of a compose function in JavaScript (note! the functions are applied in a left to right order).</p><script src="//gist.github.com/ksnabb/a023f3643c50cfdc6d272a0e738d1106.js?file=composition-with-javascript.js"></script><h2>Composing multiple functions</h2><p>In practice a more useful compose function would allow you to compose a variadic amount of functions at the same
+time.
+</p><p>When composing multiple functions it's good to realise that function composition is always associative.
+Which means that <em>f &compfn; (g &compfn; h)</em> gives the same result as <em>(f &compfn; g) &compfn; h</em>.
+</p><p>Below is an implementation in JavaScript that composes together a variadic amount of functions.</p><script src="//gist.github.com/ksnabb/a023f3643c50cfdc6d272a0e738d1106.js?file=variadic-compose.js"></script><script src="/js/notes/composition-with-javascript.js"></script></body></html>
