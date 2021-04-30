@@ -1,12 +1,54 @@
-<!DOCTYPE html><html lang="en"><head><title>Notes</title><link href="https://unpkg.com/mocha@5.2.0/mocha.css" rel="stylesheet"><style>.app {
-  border: 1px solid #f5f5f5;
-  padding: 10px;
-  text-align: center;
-}
-</style><link rel="stylesheet" href="/css/main.css"></head><body><a href="/">back</a><h1>Testing the Simple Counter</h1><p>This setup tests the Simple Counter app.</p><p>The test framework used is <a href="https://mochajs.org/">mocha</a> which provides a way to run
-tests in the browser. The component itself is included in the server side templates on this page.
-</p><p>Below you can see the same simple counter component that was presented in the <a href="/notes/simple-counter.html">Simple Counter</a> note.
-</p><div class="app"><p>The number is now 0</p><button>increment the number</button></div><script src="/js/notes/simple-counter-app.js"></script><p>The testing is done by checking with the help of DOM functions the state of the simple counter and also
-triggering click event on the simple counter button.
-</p><p>The tests them selves are run when loading this page and the result can be seen below:</p><div id="mocha"></div><script src="https://unpkg.com/chai/chai.js"></script><script src="https://unpkg.com/mocha@5.2.0/mocha.js"></script><script>mocha.setup('bdd')</script><script src="/js/notes/simple-counter-app-test.js"></script><script>mocha.checkLeaks();
-mocha.run();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Notes</title>
+    <link href="https://unpkg.com/mocha@5.2.0/mocha.css" rel="stylesheet" />
+    <style>
+      .app {
+        border: 1px solid #f5f5f5;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <a href="/">back</a>
+    <h1>Testing the Simple Counter</h1>
+    <p>This setup tests the Simple Counter app.</p>
+    <p>
+      The test framework used is <a href="https://mochajs.org/">mocha</a> which
+      provides a way to run tests in the browser. The component itself is
+      included in the server side templates on this page.
+    </p>
+    <p>
+      Below you can see the same simple counter component that was presented in
+      the <a href="/notes/simple-counter.html">Simple Counter</a> note.
+    </p>
+    <div class="app">
+      <p>The number is now 0</p>
+      <button>increment the number</button>
+    </div>
+    <script src="/js/notes/simple-counter-app.js"></script>
+    <p>
+      The testing is done by checking with the help of DOM functions the state
+      of the simple counter and also triggering click event on the simple
+      counter button.
+    </p>
+    <p>
+      The tests them selves are run when loading this page and the result can be
+      seen below:
+    </p>
+    <div id="mocha"></div>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha@5.2.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="/js/notes/simple-counter-app-test.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+</html>

@@ -1,17 +1,17 @@
 /* global describe it */
 
-const {expect} = chai;
+const { expect } = chai;
 
 function setTimeoutPromise(delay) {
   return new Promise((resolve) => {
-    setTimeout(resolve, delay)
+    setTimeout(resolve, delay);
   });
 }
 
 function waitForPageToLoad(frame) {
   return new Promise((resolve) => {
-    if (frame.document.readyState === 'complete') {
-      return resolve()
+    if (frame.document.readyState === "complete") {
+      return resolve();
     } else {
       return setTimeoutPromise(50)
         .then(waitForPageToLoad.bind(this, frame))
@@ -27,9 +27,12 @@ function validateLinks(frame, domain, anchors = [], visited = new Set()) {
     }
     waitForPageToLoad(frame)
       .then(() => {
-        expect(frame.document.title).not.to.equal("Page not found · GitHub Pages");
+        expect(frame.document.title).not.to.equal(
+          "Page not found · GitHub Pages"
+        );
 
-        const links = anchors.concat(Array.from(frame.document.querySelectorAll("a")))
+        const links = anchors
+          .concat(Array.from(frame.document.querySelectorAll("a")))
           .filter((e) => !visited.has(e.href))
           .filter((e) => e.href.includes(domain));
 
@@ -46,14 +49,11 @@ function validateLinks(frame, domain, anchors = [], visited = new Set()) {
 }
 
 describe("Notes page", () => {
-
   // assuming there's no other frames in the main window
   const frame = window.frames[0];
 
   it("should have only valid links e.g. no 404", (done) => {
     frame.location = "https://ksnabb.github.io";
-    validateLinks(frame, 'ksnabb.github.io')
-      .then(done);
+    validateLinks(frame, "ksnabb.github.io").then(done);
   });
-
 });

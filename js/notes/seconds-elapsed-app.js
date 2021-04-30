@@ -2,8 +2,8 @@ function pubSub() {
   const listeners = [];
   return {
     dispatch: (event) => listeners.forEach((l) => l(event)),
-    subscribe: (fun) => listeners.push(fun)
-  }
+    subscribe: (fun) => listeners.push(fun),
+  };
 }
 
 function state(initialValue, pubsub) {
@@ -20,8 +20,8 @@ function state(initialValue, pubsub) {
 
   return {
     getValue,
-    setValue
-  }
+    setValue,
+  };
 }
 
 const appEvents = pubSub();
@@ -34,7 +34,9 @@ function timer() {
 setTimeout(timer, 1000);
 
 function updateTimerView(val) {
-  document.querySelector(".seconds-elapsed").innerText = `seconds elapsed ${val}`;
+  document.querySelector(
+    ".seconds-elapsed"
+  ).innerText = `seconds elapsed ${val}`;
 }
 
 appEvents.subscribe(updateTimerView);
