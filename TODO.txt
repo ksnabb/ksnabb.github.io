@@ -1,0 +1,16 @@
+Aim:
+* get into GIS again, become an expert
+
+TODO:
+* Create an own leaflet type of library (to learn)
+   * goals:
+      * immutable interface
+      * functional
+      * pure javascript (no preprocessing)
+      * minimize the amount of dependencies
+      * well tested 100% coverage
+      * use webassembly if feasible
+      * use canvas if feasible
+      * use webgl if feasible
+      * full client support > 99% of clients
+      * lightweight, render only tiles / features on a map
