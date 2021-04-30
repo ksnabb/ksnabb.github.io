@@ -2,8 +2,8 @@ function pubSub() {
   const listeners = [];
   return {
     dispatch: (event) => listeners.forEach((l) => l(event)),
-    subscribe: (fun) => listeners.push(fun)
-  }
+    subscribe: (fun) => listeners.push(fun),
+  };
 }
 
 function state(initialValue, pubsub) {
@@ -20,6 +20,6 @@ function state(initialValue, pubsub) {
 
   return {
     getValue,
-    setValue
-  }
+    setValue,
+  };
 }

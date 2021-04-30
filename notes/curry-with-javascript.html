@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="en"><head><title>Notes</title><link rel="stylesheet" href="/css/main.css"></head><body><a href="/">back</a><h1>Currying with JavaScript</h1><p>There are a few ways to implement currying. I'm not exactly sure if they all fit exactly into
+the definition of currying. Nevertheless I will collect different curry methods in this page.</p><h2>Variadic Arity Currying</h2><p>This version of the curry function works with any function arity.
+The returned curried function will take as many parameters as is passed into it at a time.
+</p><script src="https://gist.github.com/ksnabb/f33097771bd371397e21f86b3cdac599.js"></script><p>One of the bad sides of this curry method is that it will not give any warning if it's called with too many arguments. 
+Another is that the returned function will have a set arity of 0 which is not correct. 
+The set arity of 0 might make some composition or other type of functional combination of functions impossible or difficult with the returned function.
+</p><p>The good being the implementation is simple and flexible.</p><h2>Fixed Arity Currying</h2><p>TODO, this type of currying is done in e.g. ramda</p><script src="/js/notes/curry-with-javascript.js"></script></body></html>

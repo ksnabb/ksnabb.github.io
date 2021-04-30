@@ -8,8 +8,8 @@ function pubSub() {
   const listeners = [];
   return {
     dispatch: (event) => listeners.forEach((l) => l(event)),
-    subscribe: (fun) => listeners.push(fun)
-  }
+    subscribe: (fun) => listeners.push(fun),
+  };
 }
 
 function state(initialValue, pubsub) {
@@ -26,19 +26,19 @@ function state(initialValue, pubsub) {
 
   return {
     getValue,
-    setValue
-  }
+    setValue,
+  };
 }
 
-const button = document.querySelector('.app button');
-const showState = document.querySelector('.app p');
+const button = document.querySelector(".app button");
+const showState = document.querySelector(".app p");
 const appEvents = pubSub();
 const appState = state(0, appEvents);
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   appState.setValue(appState.getValue() + 1);
 });
 
 appEvents.subscribe((newValue) => {
-  showState.innerText = `The number is now ${newValue}`
+  showState.innerText = `The number is now ${newValue}`;
 });

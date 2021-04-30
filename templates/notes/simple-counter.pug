@@ -7,7 +7,7 @@ block head
       padding: 10px;
       text-align: center;
     }
-
+  
 block body
   a(href="/") back
 
@@ -34,13 +34,17 @@ block body
 
   p Below you can see one pure JavaScript impementation of publish subscribe.
 
-  script(src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=pubsub.js")
+  script(
+    src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=pubsub.js"
+  )
 
   h2 The State
 
   p The state will use the above pubSub to dispatch events on state changes.
 
-  script(src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=state.js")
+  script(
+    src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=state.js"
+  )
 
   h2 The View
 
@@ -48,14 +52,11 @@ block body
     The view can then be setup using the pubSub and the state. For connecting event listeners we can use standard
     DOM functions and manipulation.
 
-  script(src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=view.js")
+  script(
+    src="//gist.github.com/ksnabb/271f4a7367b4f5571571c9a7a7ea6ecf.js?file=view.js"
+  )
 
   p.
     By just modifying the content of the paragraph in the click event listener we could have done this using only
     3 lines of JavaScript code. The pubsub and the state handling does give the application some more structure
     and a promise to handle larger more complex frontends.
-
-
-
-
-
