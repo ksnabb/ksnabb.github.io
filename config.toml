@@ -1,0 +1,4 @@
+baseURL = 'https://ksnabb.github.io/'
+languageCode = 'en-us'
+title = 'Kristoffer Snabb'
+theme = 'ananke'
