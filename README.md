@@ -16,8 +16,3 @@ Install Hugo
 
      hugo server
 
-
- ### Topic Ideas to cover
-
- * Currying with fixed aritry functions
- * Error management in a node.js BFF type of service
