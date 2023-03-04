@@ -6,7 +6,7 @@ Based on Hugo static site generator. In this site I collect notes, blog posts an
 
 Install Hugo
 
-   brew install hugo
+    brew install hugo
 
  That is it, no other dependencies are needed.
 
