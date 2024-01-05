@@ -1,18 +1,3 @@
-# My Notes, Blog posts and Rants
+# My Notes, posts and experiments
 
-Based on Hugo static site generator. In this site I collect notes, blog posts and rants related to what I am working with.
-
-## Pre-requisites
-
-Install Hugo
-
-    brew install hugo
-
- That is it, no other dependencies are needed.
-
- ## How to run
-
- Run from root with the hugo CLI.
-
-     hugo server
-
+Based on Hugo static site generator. In this site I collect notes, posts and experiments related to what I am working with.
