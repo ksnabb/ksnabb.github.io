@@ -1,14 +1,14 @@
 ---
-title: Relevant Links
+title: Links
 featured_image: ''
 omit_header_text: true
 type: page
 menu: main
 ---
 
-# Relevant Links
+These are links to other publications for inspiration and learning.
 
-These links are relevant to the content of this site and the work I do.
+These links are a collection of blogs, books, and other publications that I have found useful in my work and learning. I hope you find them useful too.
 
 ## Blogs
 
