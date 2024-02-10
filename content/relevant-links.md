@@ -14,3 +14,7 @@ These links are relevant to the content of this site and the work I do.
 
 - [Henrik Kniberg blog](https://blog.crisp.se/author/henrikkniberg)
 - [Martin Fowler blog](https://martinfowler.com/)
+
+## Books
+
+- [Agile IT Organization Design](https://www.amazon.com/dp/0133903354?tag=aitod-20)
